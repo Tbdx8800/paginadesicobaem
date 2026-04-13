@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Página informativa sobre el Sistema de Control Escolar (SICOBAEM) del Colegio de Bachilleres del Estado de Michoacán.">
+    <title>SICOBAEM | Portal de Consulta Informativo</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar Flotante -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i> SICOBAEM
+            </div>
+            <ul class="nav-links">
+                <li><a href="#acerca-de">Sistema</a></li>
+                <li><a href="#basicas">Tronco Básico</a></li>
+                <li><a href="#tics">Informática</a></li>
+                <li><a href="#pasos">Ingreso</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <header class="hero">
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="hero-content">
+            <!-- Autor y Logo hasta arriba -->
+            <div class="hero-author-top">
+                <img src="https://www.cobamich.edu.mx/images/2022/logo_cobaem2021.png" alt="Logo Colegio de Bachilleres"
+                    class="hero-logo">
+                <div class="author-badge">
+                    <span class="name">Nicolás De la Cruz Hernández</span>
+                    <span class="group"><i class="fas fa-users"></i> Grupo 403</span>
+                </div>
+            </div>
+
+            <span class="badge"><i class="fas fa-graduation-cap"></i> Guía Estudiantil</span>
+            <h1 id="main-title">Consulta SICOBAEM</h1>
+            <p>El Sistema de Control Escolar del Colegio de Bachilleres del Estado de Michoacán. Tu enlace directo,
+                rápido y seguro con tu información académica.</p>
+            <a href="#acerca-de" class="btn-primary">Saber más <i class="fas fa-arrow-down"></i></a>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="container">
+        <!-- Sección de Información -->
+        <section class="info-section" id="acerca-de">
+            <h2><i class="fas fa-info-circle"></i> ¿Qué es el SICOBAEM?</h2>
+            <p>El <strong>SICOBAEM</strong> es la plataforma digital oficial implementada por el COBAEM para gestionar y
+                administrar la información escolar de su comunidad estudiantil. Esta herramienta tecnológica, diseñada
+                con altos estándares de seguridad, permite a los alumnos de bachillerato consultar de forma autónoma su
+                trayectoria escolar en tiempo real.</p>
+            <br>
+            <p>El dominio de este sistema es una competencia digital clave para el estudiante moderno, pues facilita los
+                trámites administrativos, fomenta la responsabilidad académica y mantiene una comunicación constante
+                entre la institución y la comunidad escolar, evitando traslados innecesarios a los planteles.</p>
+        </section>
+
+        <!-- Sección de Funciones -->
+        <section class="features-grid" id="funciones">
+            <article class="feature-card" style="animation: fadeInUp 1s ease-out 0.2s both;">
+                <i class="fas fa-laptop-file"></i>
+                <h3>Consulta de Calificaciones</h3>
+                <p>Accede a un desglose detallado de tus evaluaciones parciales y promedios semestrales actualizados al
+                    instante.</p>
+            </article>
+
+            <article class="feature-card" style="animation: fadeInUp 1s ease-out 0.4s both;">
+                <i class="fas fa-chart-line"></i>
+                <h3>Historial Académico</h3>
+                <p>Descarga y revisa tu kárdex digital para verificar tu avance en créditos y asignaturas cursadas a lo
+                    largo de tu bachillerato.</p>
+            </article>
+
+            <article class="feature-card" style="animation: fadeInUp 1s ease-out 0.6s both;">
+                <i class="fas fa-file-signature"></i>
+                <h3>Trámites y Reinscripción</h3>
+                <p>Agiliza procesos institucionales, genera referencias de pago y realiza tu proceso de reinscripción
+                    semestral eficientemente.</p>
+            </article>
+        </section>
+
+        <!-- NUEVA: Sección de Pasos para Ingresar -->
+        <section class="steps-section" id="pasos">
+            <h2><i class="fas fa-list-ol"></i> ¿Cómo Ingresar por Primera Vez?</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <h4>Ten lista tu Matrícula</h4>
+                    <p>Necesitarás tu número de matrícula escolar oficial expedida por el plantel.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <h4>Conoce tu Contraseña</h4>
+                    <p>Generalmente, para el primer acceso se utiliza tu CURP o fecha de nacimiento.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <h4>Resuelve la Seguridad</h4>
+                    <p>Ingresa los caracteres del Captcha para validar que no eres un robot.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">4</div>
+                    <h4>Actualiza tus Datos</h4>
+                    <p>Por seguridad, cambia tu contraseña de inmediato y añade un correo de recuperación.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUEVA: Sección de UAC's Tronco Básico -->
+        <section class="uac-section" id="basicas">
+            <h2><i class="fas fa-book"></i> Formación Básica (4to Semestre)</h2>
+            <p style="margin-bottom: 25px; font-size: 1.1rem; color: #334155;">Adicional a tu capacitación, cursarás las
+                Unidades de Aprendizaje Curricular (UAC's) correspondientes al tronco común general que conforman la
+                base académica de nivel bachillerato:</p>
+            <div class="uac-grid"
+                style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); margin-bottom: 15px;">
+                <div class="uac-card" style="padding: 20px 15px;">
+                    <i class="fas fa-square-root-alt" style="font-size: 2rem; margin-bottom: 15px;"></i>
+                    <h4 style="font-size: 1.1rem; margin-bottom: 0;">Temas selectos matemáticos</h4>
+                </div>
+                <div class="uac-card" style="padding: 20px 15px;">
+                    <i class="fas fa-atom" style="font-size: 2rem; margin-bottom: 15px;"></i>
+                    <h4 style="font-size: 1.1rem; margin-bottom: 0;">Física II</h4>
+                </div>
+                <div class="uac-card" style="padding: 20px 15px;">
+                    <i class="fas fa-leaf" style="font-size: 2rem; margin-bottom: 15px;"></i>
+                    <h4 style="font-size: 1.1rem; margin-bottom: 0;">Biología II</h4>
+                </div>
+                <div class="uac-card" style="padding: 20px 15px;">
+                    <i class="fas fa-landmark" style="font-size: 2rem; margin-bottom: 15px;"></i>
+                    <h4 style="font-size: 1.1rem; margin-bottom: 0;">Conciencia Histórica I</h4>
+                </div>
+                <div class="uac-card" style="padding: 20px 15px;">
+                    <i class="fas fa-book-open" style="font-size: 2rem; margin-bottom: 15px;"></i>
+                    <h4 style="font-size: 1.1rem; margin-bottom: 0;">Literatura I</h4>
+                </div>
+                <div class="uac-card" style="padding: 20px 15px;">
+                    <i class="fas fa-language" style="font-size: 2rem; margin-bottom: 15px;"></i>
+                    <h4 style="font-size: 1.1rem; margin-bottom: 0;">Inglés IV</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUEVA: Sección de UAC's 4to Semestre TICS -->
+        <section class="uac-section" id="tics">
+            <h2><i class="fas fa-laptop-code"></i> Capacitación TICS - UAC's (4to Semestre)</h2>
+            <p style="margin-bottom: 25px; font-size: 1.1rem; color: #334155;">Como parte del Grupo 403 y perfilado en
+                la <strong>Capacitación en Tecnologías de la Información y la Comunicación (TICS)</strong>, durante tu
+                4to Semestre cursarás las siguientes UAC's técnicas:</p>
+            <div class="uac-grid">
+                <div class="uac-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h4>Mantenimiento y Redes de Cómputo</h4>
+                    <p>Aprenderás los fundamentos de conectividad, topologías de red, protocolos IP y soporte técnico
+                        preventivo y correctivo de equipos.</p>
+                </div>
+                <div class="uac-card">
+                    <i class="fas fa-desktop"></i>
+                    <h4>Taller de cultura digital</h4>
+                    <p>Desarrollo de habilidades y responsabilidades en el entorno digital, ciudadanía tecnológica,
+                        ofimática avanzada y uso seguro de herramientas en la nube.</p>
+                </div>
+                <div class="uac-card">
+                    <i class="fas fa-users-cog"></i>
+                    <h4>Comunidades Virtuales</h4>
+                    <p>Gestión responsable de entornos digitales comunitarios, administración de identidades en línea e
+                        introducción a la ciberseguridad.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUEVA: Preguntas Frecuentes -->
+        <section class="faq-section" id="faq">
+            <h2><i class="fas fa-question-circle"></i> Preguntas Frecuentes</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>¿Qué hago si olvidé mi contraseña?</summary>
+                    <p>Deberás acudir de manera presencial al departamento de Control Escolar de tu plantel con tu
+                        credencial de estudiante física para solicitar un restablecimiento de tu contraseña en el
+                        sistema.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Cuándo se actualizan mis calificaciones en la plataforma?</summary>
+                    <p>Las evaluaciones se reflejan en el sistema una vez que concluye la semana de captura oficial
+                        estipulada por la dirección en cada periodo de evaluación parcial o semestral.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿El historial académico descargable me sirve para trámites?</summary>
+                    <p>El Kárdex digital generado por SICOBAEM es oficial y tiene validez interna. Sin embargo, para
+                        trámites como becas o revalidaciones externas, a menudo requerirás el sello y firma física y
+                        original del plantel.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- NUEVA: Apartado de Recursos y Consultorios -->
+        <section class="uac-section" id="recursos">
+            <h2><i class="fas fa-project-diagram"></i> Material de Apoyo</h2>
+            <div
+                style="display: flex; gap: 40px; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 300px;">
+                    <p style="font-size: 1.15rem; color: #475569; line-height: 1.7;">
+                        <strong>Acceso a:</strong> Mapas mentales; Consultorios
+                    </p>
+                    <p style="font-size: 1.05rem; color: #64748B; margin-top: 15px;">
+                        Escanea el código QR o haz clic en el botón para acceder a material de estudio digital y a los
+                        espacios de consulta.
+                    </p>
+                </div>
+                <div
+                    style="background: white; padding: 25px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; border: 1px solid rgba(0, 59, 115, 0.15); animation: fadeInUp 1s ease-out 1s both;">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://canva.link/2ldzcaltb86cit9"
+                        alt="Código QR de Acceso a Mapas Mentales y Consultorios"
+                        style="width: 150px; height: 150px; border-radius: 10px; margin-bottom: 15px;">
+                    <p style="font-size: 1rem; color: #003B73; font-weight: 800; margin: 0;">Recursos Digitales</p>
+                    <a href="https://canva.link/2ldzcaltb86cit9" target="_blank"
+                        style="display: inline-block; margin-top: 10px; font-size: 0.85rem; color: #0056b3; text-decoration: none; font-weight: 600; padding: 6px 15px; border-radius: 15px; background: #f8fafc; transition: all 0.3s ease;">
+                        Abrir Enlace <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Requisitos y Acceso -->
+        <section class="requirements-section" id="requisitos">
+            <h2><i class="fas fa-check-circle"></i> Recomendaciones de Acceso</h2>
+            <div
+                style="display: flex; gap: 40px; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+                <ul class="req-list" style="flex: 1; min-width: 300px;">
+                    <li><i class="fas fa-key"></i> Mantén tu matrícula y contraseña en un lugar seguro y no la compartas
+                        con terceros.</li>
+                    <li><i class="fas fa-globe"></i> Utiliza navegadores actualizados (Chrome, Firefox o Edge) para una
+                        mejor experiencia.</li>
+                    <li><i class="fas fa-envelope"></i> Asegúrate de tener registrado un correo electrónico
+                        institucional vigente para recuperar accesos.</li>
+                </ul>
+                <div
+                    style="background: white; padding: 25px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; border: 1px solid rgba(0, 59, 115, 0.15); animation: fadeInUp 1s ease-out 0.8s both;">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://academica.cobamich.edu.mx/sicobaem/ini"
+                        alt="Código QR de Acceso SICOBAEM"
+                        style="width: 150px; height: 150px; border-radius: 10px; margin-bottom: 15px;">
+                    <p style="font-size: 1rem; color: #003B73; font-weight: 800; margin: 0;">Acceso Directo</p>
+                    <a href="https://academica.cobamich.edu.mx/sicobaem/ini" target="_blank"
+                        style="display: inline-block; margin-top: 10px; font-size: 0.85rem; color: #0056b3; text-decoration: none; font-weight: 600; padding: 6px 15px; border-radius: 15px; background: #f8fafc; transition: all 0.3s ease;">Ir
+                        al Portal <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Separador Ola Animada -->
+    <div class="wave-divider">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                class="shape-fill"></path>
+        </svg>
+    </div>
+
+    <!-- Pie de página / Autor -->
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2026 Página Informativa Estudiantil - Sistema SICOBAEM.</p>
+            <p>Nota: Este es un trabajo escolar de carácter demostrativo e informativo y no sustituye al portal oficial
+                de la institución.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

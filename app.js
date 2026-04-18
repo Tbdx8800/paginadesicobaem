@@ -15,6 +15,16 @@ const db = getFirestore(app);
 
 const STORAGE_STORE = 'realphone_current_store';
 
+// ==================== STORE ADDRESSES ====================
+const STORE_ADDRESSES = {
+    "Matriz": "Lázaro Cárdenas 179 Col. Centro",
+    "Sunny": "53 Príncipe Tacámba Col. Centro",
+    "Hospital": "99 Álvaro Obregón Col. Centro",
+    "David": "Av. Madero Oriente Col. Centro",
+    "Portal": "34 Portal Nicolás de Regulés Col. Centro",
+    "Coppel": "486 Lic. Isidro Favela Col. Los Pinos"
+};
+
 // ==================== CLOUD / DB ABSTRACTION ====================
 const DB = {
     getStore: () => localStorage.getItem(STORAGE_STORE) || '',

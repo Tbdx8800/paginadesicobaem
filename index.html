@@ -111,6 +111,44 @@
         </div>
     </div>
 
+    <!-- Confirm Ticket Modal -->
+    <div id="confirmTicketModal" class="modal-overlay hidden">
+        <div class="modal-content" style="max-width: 500px; text-align: left;">
+            <h2 style="text-align:center; margin-bottom:1.5rem;"><i class="fa-solid fa-circle-check"
+                    style="color:var(--primary-light)"></i> Confirmar Ticket</h2>
+            <p style="color:var(--text-muted); margin-bottom:1.5rem; text-align:center;">Verifica los datos antes de
+                crear el ticket:</p>
+            <div id="confirmTicketBody" style="display:flex; flex-direction:column; gap:0.75rem; margin-bottom:1.5rem;">
+            </div>
+            <div class="form-row">
+                <button type="button" id="btnCancelConfirmTicket" class="btn btn-outline"
+                    style="color:#666; border-color:#ccc;">Cancelar</button>
+                <button type="button" id="btnAcceptConfirmTicket" class="btn btn-primary"><i
+                        class="fa-solid fa-check"></i> Crear Ticket</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Confirmation Modal (Admin only - Facturas) -->
+    <div id="paymentConfirmModal" class="modal-overlay hidden">
+        <div class="modal-content" style="max-width: 450px;">
+            <h2 style="margin-bottom:0.5rem;"><i class="fa-solid fa-shield-halved" style="color:#f59e0b"></i> Confirmar
+                Pago</h2>
+            <p style="color:var(--text-muted); margin-bottom:1.5rem;">Como administrador, confirma que se ha recibido el
+                pago de este ticket.</p>
+            <div id="paymentConfirmBody"
+                style="background:#f8fafc; border-radius:8px; padding:1rem; margin-bottom:1.5rem; font-size:0.95rem;">
+            </div>
+            <div class="form-row">
+                <button type="button" id="btnCancelPaymentConfirm" class="btn btn-outline"
+                    style="color:#666; border-color:#ccc;">Cancelar</button>
+                <button type="button" id="btnAcceptPaymentConfirm" class="btn"
+                    style="background:#10b981; color:white;"><i class="fa-solid fa-money-bill-wave"></i> Confirmar
+                    Pago</button>
+            </div>
+        </div>
+    </div>
+
     <header class="app-header">
         <div class="logo">
             <i class="fa-solid fa-mobile-screen"></i>
@@ -249,34 +287,38 @@
                         </div>
                     </div>
 
-                    <!-- Búsqueda Profesional Facturas -->
-                    <div class="search-bar-container"
-                        style="display: flex; gap: 1rem; background: #f8fafc; padding: 1rem; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 1.5rem; flex-wrap: wrap;">
-                        <div
-                            style="flex: 1; min-width: 200px; display: flex; flex-direction: column; gap: 0.4rem; position: relative;">
-                            <label style="font-size: 0.85rem; font-weight: 600; color: var(--primary-dark);"><i
-                                    class="fa-solid fa-calendar-day"
-                                    style="color:var(--primary-light); margin-right: 0.3rem;"></i> Fecha de
-                                registro</label>
-                            <input type="text" id="searchInputFacturas" placeholder="Ej: 21/04/2026"
-                                style="width: 100%; padding: 0.6rem 1rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.95rem; font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);">
+                    <!-- Búsqueda Facturas -->
+                    <div class="search-panel">
+                        <div class="search-panel-title">
+                            <i class="fa-solid fa-magnifying-glass"></i> Buscar facturas
                         </div>
-                        <div class="admin-search-option"
-                            style="flex: 1; min-width: 200px; display: none; flex-direction: column; gap: 0.4rem; position: relative;">
-                            <label style="font-size: 0.85rem; font-weight: 600; color: var(--primary-dark);"><i
-                                    class="fa-solid fa-store"
-                                    style="color:var(--primary-light); margin-right: 0.3rem;"></i> Tienda de
-                                origen</label>
-                            <select id="searchStoreFacturas"
-                                style="width: 100%; padding: 0.6rem 1rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.95rem; font-family: 'Inter', sans-serif; outline: none; background: #fff; cursor: pointer; transition: border-color 0.2s; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);">
-                                <option value="">Todas las tiendas</option>
-                                <option value="Matriz">Matriz</option>
-                                <option value="Sunny">Sunny</option>
-                                <option value="Hospital">Hospital</option>
-                                <option value="David">David</option>
-                                <option value="Portal">Portal</option>
-                                <option value="Coppel">Coppel</option>
-                            </select>
+                        <div class="search-grid">
+                            <div class="search-field">
+                                <label class="search-label">
+                                    <i class="fa-solid fa-calendar-day"></i> Fecha o nombre del cliente
+                                </label>
+                                <div class="search-input-wrap">
+                                    <i class="fa-solid fa-search search-icon-inner"></i>
+                                    <input type="text" id="searchInputFacturas" placeholder="Ej: 21/04/2026 o nombre..."
+                                        class="search-input">
+                                    <button type="button" class="search-clear-btn" id="clearSearchFacturas"
+                                        title="Limpiar búsqueda">&#x2715;</button>
+                                </div>
+                            </div>
+                            <div class="search-field admin-search-option" style="display:none;">
+                                <label class="search-label">
+                                    <i class="fa-solid fa-store"></i> Tienda de origen
+                                </label>
+                                <select id="searchStoreFacturas" class="search-select">
+                                    <option value="">Todas las tiendas</option>
+                                    <option value="Matriz">Matriz</option>
+                                    <option value="Sunny">Sunny</option>
+                                    <option value="Hospital">Hospital</option>
+                                    <option value="David">David</option>
+                                    <option value="Portal">Portal</option>
+                                    <option value="Coppel">Coppel</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
 
@@ -324,6 +366,19 @@
                             <div class="form-group">
                                 <label for="deviceModel">Modelo del equipo</label>
                                 <input type="text" id="deviceModel" required placeholder="Ej: iPhone 13, Moto G50...">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="clientPhoneReparacion">Número de teléfono del cliente</label>
+                            <div style="display:flex; gap:0.75rem; align-items:center;">
+                                <input type="tel" id="clientPhoneReparacion" placeholder="Ej: 555 123 4567"
+                                    style="flex:1;">
+                                <label
+                                    style="display:flex; align-items:center; gap:0.4rem; white-space:nowrap; font-weight:500; color:var(--text-muted); cursor:pointer; margin-bottom:0;">
+                                    <input type="checkbox" id="noPhoneReparacion"
+                                        style="width:16px; height:16px; cursor:pointer;"> Sin teléfono
+                                </label>
                             </div>
                         </div>
 
@@ -389,47 +444,53 @@
                 </section>
 
                 <section class="tickets-section">
-                    <div class="tickets-header" style="flex-wrap: wrap; margin-bottom: 1rem;">
+                    <div class="tickets-header" style="margin-bottom: 1rem;">
                         <h2><i class="fa-solid fa-list"></i> Registro de Reparaciones</h2>
-                        <div class="filter-group">
-                            <select id="filterStatusReparaciones"
-                                style="padding: 0.5rem 1rem; border: 1px solid #d1d5db; border-radius: 8px; font-weight: 500; outline: none;">
-                                <option value="Todos">Todos los Estados</option>
-                                <option value="Pendiente">Solo Pendientes</option>
-                                <option value="Realizado">Solo Realizadas</option>
-                                <option value="Cancelado">Solo Canceladas</option>
-                            </select>
-                        </div>
                     </div>
 
-                    <!-- Búsqueda Profesional Reparaciones -->
-                    <div class="search-bar-container"
-                        style="display: flex; gap: 1rem; background: #f8fafc; padding: 1rem; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 1.5rem; flex-wrap: wrap;">
-                        <div
-                            style="flex: 1; min-width: 200px; display: flex; flex-direction: column; gap: 0.4rem; position: relative;">
-                            <label style="font-size: 0.85rem; font-weight: 600; color: var(--primary-dark);"><i
-                                    class="fa-solid fa-calendar-day"
-                                    style="color:var(--primary-light); margin-right: 0.3rem;"></i> Fecha de
-                                registro</label>
-                            <input type="text" id="searchInputReparaciones" placeholder="Ej: 21/04/2026"
-                                style="width: 100%; padding: 0.6rem 1rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.95rem; font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);">
+                    <!-- Búsqueda Reparaciones -->
+                    <div class="search-panel">
+                        <div class="search-panel-title">
+                            <i class="fa-solid fa-magnifying-glass"></i> Buscar reparaciones
                         </div>
-                        <div class="admin-search-option"
-                            style="flex: 1; min-width: 200px; display: none; flex-direction: column; gap: 0.4rem; position: relative;">
-                            <label style="font-size: 0.85rem; font-weight: 600; color: var(--primary-dark);"><i
-                                    class="fa-solid fa-store"
-                                    style="color:var(--primary-light); margin-right: 0.3rem;"></i> Tienda de
-                                origen</label>
-                            <select id="searchStoreReparaciones"
-                                style="width: 100%; padding: 0.6rem 1rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.95rem; font-family: 'Inter', sans-serif; outline: none; background: #fff; cursor: pointer; transition: border-color 0.2s; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);">
-                                <option value="">Todas las tiendas</option>
-                                <option value="Matriz">Matriz</option>
-                                <option value="Sunny">Sunny</option>
-                                <option value="Hospital">Hospital</option>
-                                <option value="David">David</option>
-                                <option value="Portal">Portal</option>
-                                <option value="Coppel">Coppel</option>
-                            </select>
+                        <div class="search-grid">
+                            <div class="search-field">
+                                <label class="search-label">
+                                    <i class="fa-solid fa-calendar-day"></i> Fecha o nombre del cliente
+                                </label>
+                                <div class="search-input-wrap">
+                                    <i class="fa-solid fa-search search-icon-inner"></i>
+                                    <input type="text" id="searchInputReparaciones"
+                                        placeholder="Ej: 21/04/2026 o nombre..." class="search-input">
+                                    <button type="button" class="search-clear-btn" id="clearSearchReparaciones"
+                                        title="Limpiar búsqueda">&#x2715;</button>
+                                </div>
+                            </div>
+                            <div class="search-field">
+                                <label class="search-label">
+                                    <i class="fa-solid fa-filter"></i> Estado
+                                </label>
+                                <select id="filterStatusReparaciones" class="search-select">
+                                    <option value="Todos">Todos los estados</option>
+                                    <option value="Pendiente">Solo Pendientes</option>
+                                    <option value="Realizado">Solo Realizadas</option>
+                                    <option value="Cancelado">Solo Canceladas</option>
+                                </select>
+                            </div>
+                            <div class="search-field admin-search-option" style="display:none;">
+                                <label class="search-label">
+                                    <i class="fa-solid fa-store"></i> Tienda de origen
+                                </label>
+                                <select id="searchStoreReparaciones" class="search-select">
+                                    <option value="">Todas las tiendas</option>
+                                    <option value="Matriz">Matriz</option>
+                                    <option value="Sunny">Sunny</option>
+                                    <option value="Hospital">Hospital</option>
+                                    <option value="David">David</option>
+                                    <option value="Portal">Portal</option>
+                                    <option value="Coppel">Coppel</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
 
@@ -477,5 +538,3 @@
 </body>
 
 </html>
-¡Nueva actualización! Se han hecho pequeños cambios para facilitar la gestión del sistema: Se ha eliminado la posibilidad de cambiar la contraseña para los clientes. Se ha añadido la búsqueda por fecha
-y se han hecho pequeños cambios en el lenguaje del sistema. Pronto se añadirán más cambios. 2026.4.2 --- Ya deja de usar minoxidil Lalo. Paro.

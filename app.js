@@ -58,19 +58,8 @@ onSnapshot(collection(db, "users"), (snapshot) => {
     // Si no hay usuarios en la nube, creamos los por defecto
     if (users.length === 0) {
         const defaultUsers = [
-            { id: '1', username: 'saul', password: '123', role: 'admin' },
-            { id: '2', username: 'nicolas', password: '123', role: 'admin' },
-            { id: '3', username: 'angel', password: '123', role: 'client' },
-            { id: '4', username: 'karen', password: '123', role: 'client' },
-            { id: '5', username: 'yatziri', password: '123', role: 'client' },
-            { id: '6', username: 'eduardo', password: '123', role: 'client' },
-            { id: '7', username: 'fernanda', password: '123', role: 'client' },
-            { id: '8', username: 'yamileth', password: '123', role: 'client' },
-            { id: '9', username: 'eden', password: '123', role: 'client' },
-            { id: '10', username: 'baka emmanuel poni 67', password: '123', role: 'client' },
-            { id: '11', username: 'joshua', password: '123', role: 'client' },
-            { id: '12', username: 'nestor', password: '123', role: 'client' },
-            { id: '13', username: 'mayra', password: '123', role: 'client' }
+            { id: '111', username: 'UsuarioPorDefecto', password: '123', role: 'client' },
+           
         ];
         defaultUsers.forEach(u => setDoc(doc(db, "users", u.id), u));
     }
